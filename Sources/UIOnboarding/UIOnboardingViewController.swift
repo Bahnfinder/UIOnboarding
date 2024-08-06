@@ -305,9 +305,6 @@ private extension UIOnboardingViewController {
             attributedTitle.addAttribute(.foregroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: continueButton.frame), range: NSMakeRange(0, attributedTitle.length))
             continueButton.setAttributedTitle(attributedTitle, for: .normal)
         }
-        
-        
-        
     }
 }
 
