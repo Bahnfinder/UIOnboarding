@@ -301,7 +301,11 @@ private extension UIOnboardingViewController {
             }
         }
         
-        continueButton.backgroundColor = UIColor.fromGradient(bahnfinderGradientLayer, frame: continueButton.frame)
+        if let attributedTitle = continueButton.attributedTitle(for: .normal)?.mutableCopy() as? NSMutableAttributedString {
+            attributedTitle.addAttribute(.foregroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: continueButton.frame), range: NSMakeRange(0, attributedTitle.length))
+            continueButton.setAttributedTitle(attributedTitle, for: .normal)
+        }
+        
     }
 }
 
