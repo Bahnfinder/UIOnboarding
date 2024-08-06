@@ -72,9 +72,7 @@ final class UIOnboardingStack: UIStackView {
         setCustomSpacing(traitCollection.horizontalSizeClass == .regular ? 40 : UIScreenType.setUpTitleSpacing(), after: onboardingTitleLabelStack)
         onboardingTitleLabelStack.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         onboardingTitleLabelStack.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        
-        onboardingTitleLabelStack.updateSecondTitleLine()
-        
+                
         addArrangedSubview(featuresList)
         featuresList.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         featuresList.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
@@ -100,6 +98,8 @@ final class UIOnboardingStack: UIStackView {
                 }
             })
         }
+        onboardingTitleLabelStack.updateSecondTitleLine()
+
     }
 }
 
