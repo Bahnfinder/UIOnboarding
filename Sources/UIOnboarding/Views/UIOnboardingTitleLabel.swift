@@ -67,4 +67,13 @@ extension UIOnboardingTitleLabel {
         
         return actualFontSize
     }
+    
+    
+    func applyGradient(tempString: NSMutableAttributedString) {
+        let gradientColor = UIColor.fromGradient(bahnfinderGradientLayer, frame: frame)
+        tempString.addAttribute(.foregroundColor, value: gradientColor, range: NSRange(location: 0, length: tempString.length))
+       
+       attributedText = tempString
+    }
+
 }

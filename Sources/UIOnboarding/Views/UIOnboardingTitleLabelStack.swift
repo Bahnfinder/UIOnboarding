@@ -70,10 +70,13 @@ private extension UIOnboardingTitleLabelStack {
         let firstTitleLineLabelFontSize: CGFloat = firstTitleLineLabel.calculateActualFontSize()
         let secondTitleLineLabelFontSize: CGFloat = secondTitleLineLabel.calculateActualFontSize()
         
+        secondTitleLineLabel.applyGradient(tempString: configuration.secondTitleLine)
+        
         if firstTitleLineLabelFontSize < secondTitleLineLabelFontSize {
             secondTitleLineLabel.font = firstTitleLineLabel.font.withSize(firstTitleLineLabelFontSize)
         } else if secondTitleLineLabelFontSize < firstTitleLineLabelFontSize {
             firstTitleLineLabel.font = secondTitleLineLabel.font.withSize(secondTitleLineLabelFontSize)
         }
     }
+
 }

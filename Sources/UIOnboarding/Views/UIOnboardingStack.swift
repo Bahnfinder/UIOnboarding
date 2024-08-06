@@ -98,7 +98,6 @@ final class UIOnboardingStack: UIStackView {
                 }
             })
         }
-        onboardingTitleLabelStack.updateSecondTitleLine()
 
     }
 }
