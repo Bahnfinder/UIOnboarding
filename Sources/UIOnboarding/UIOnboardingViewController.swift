@@ -241,6 +241,12 @@ private extension UIOnboardingViewController {
         onboardingTextView!.leadingAnchor.constraint(equalTo: continueButton.leadingAnchor).isActive = true
         onboardingTextView!.trailingAnchor.constraint(equalTo: continueButton.trailingAnchor).isActive = true
         onboardingTextView!.topAnchor.constraint(equalTo: onboardingNoticeIcon != nil ? onboardingNoticeIcon.bottomAnchor : bottomOverlayView.topAnchor, constant: onboardingNoticeIcon != nil ? 16 : 32).isActive = true
+        
+        
+        if let attributedTitle = continueButton.attributedTitle(for: .normal)?.mutableCopy() as? NSMutableAttributedString {
+            attributedTitle.addAttribute(.foregroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: continueButton.frame), range: NSMakeRange(0, attributedTitle.length))
+            continueButton.setAttributedTitle(attributedTitle, for: .normal)
+        }
     }
     
     func startOnboardingAnimation(completion: (() -> Void)?) {
@@ -300,11 +306,7 @@ private extension UIOnboardingViewController {
                 }
             }
         }
-        
-        if let attributedTitle = continueButton.attributedTitle(for: .normal)?.mutableCopy() as? NSMutableAttributedString {
-            attributedTitle.addAttribute(.foregroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: continueButton.frame), range: NSMakeRange(0, attributedTitle.length))
-            continueButton.setAttributedTitle(attributedTitle, for: .normal)
-        }
+
     }
 }
 
