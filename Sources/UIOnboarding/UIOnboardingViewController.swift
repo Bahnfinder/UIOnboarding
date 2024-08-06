@@ -91,6 +91,7 @@ public final class UIOnboardingViewController: UIViewController {
             updateUI()
             needsUIRefresh = false
         }
+        continueButton.applyGradient(tempString: NSMutableAttributedString(string: configuration.buttonConfiguration.title))
     }
 
     public override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -118,7 +119,6 @@ public final class UIOnboardingViewController: UIViewController {
         needsUIRefresh = true
         onboardingTextView?.layoutIfNeeded()
         continueButton.layoutIfNeeded()
-        continueButton.applyGradient(tempString: NSMutableAttributedString(string: configuration.buttonConfiguration.title))
 
     }
 }
