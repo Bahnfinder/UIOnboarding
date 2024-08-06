@@ -13,9 +13,14 @@ let package = Package(
             name: "UIOnboarding",
             targets: ["UIOnboarding"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/dqhieu/UIGradient.git", branch: "master"),
+    ],
     targets: [
         .target(
             name: "UIOnboarding",
-            dependencies: [])
+            dependencies: [
+                .product(name: "UIGradient", package: "UIGradient")
+            ])
     ]
 )

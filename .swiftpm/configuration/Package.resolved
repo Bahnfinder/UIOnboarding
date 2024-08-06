@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UIGradient",
+        "repositoryURL": "https://github.com/dqhieu/UIGradient.git",
+        "state": {
+          "branch": "master",
+          "revision": "d6f23b9f11e5b6b31179d8189fa7a94a0f22c29b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

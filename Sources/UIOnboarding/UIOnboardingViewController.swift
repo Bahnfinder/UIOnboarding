@@ -300,6 +300,8 @@ private extension UIOnboardingViewController {
                 }
             }
         }
+        
+        continueButton.backgroundColor = UIColor.fromGradient(bahnfinderGradientLayer, frame: continueButton.frame)
     }
 }
 
