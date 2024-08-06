@@ -79,7 +79,6 @@ public final class UIOnboardingViewController: UIViewController {
         
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        continueButton.applyGradient(tempString: NSMutableAttributedString(string: configuration.buttonConfiguration.title))
         startOnboardingAnimation(completion: {
             self.needsUIRefresh = true
         })
@@ -119,6 +118,8 @@ public final class UIOnboardingViewController: UIViewController {
         needsUIRefresh = true
         onboardingTextView?.layoutIfNeeded()
         continueButton.layoutIfNeeded()
+        continueButton.applyGradient(tempString: NSMutableAttributedString(string: configuration.buttonConfiguration.title))
+
     }
 }
 
