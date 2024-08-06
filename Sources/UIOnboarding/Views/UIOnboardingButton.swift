@@ -69,12 +69,11 @@ extension UIOnboardingButton {
             titleLabel?.font = UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: traitCollection.horizontalSizeClass == .regular ? 19 : 17, weight: .bold))
         }
         
-
+        
     }
     
     
     func applyGradient(tempString: NSMutableAttributedString) {
-        tempString.addAttribute(.backgroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: frame), range: NSMakeRange(0, tempString.length))
-            setAttributedTitle(tempString, for: .normal)
-        }
+        backgroundColor = UIColor.fromGradient(bahnfinderGradientLayer, frame: frame)
+    }
 }
