@@ -29,6 +29,17 @@ final class UIOnboardingTitleLabelStack: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func updateSecondTitleLine() {
+         let tempString = configuration.secondTitleLine
+        
+        let gradientColor = UIColor.fromGradient(bahnfinderGradientLayer, frame: secondTitleLineLabel.frame)
+        tempString.addAttribute(.foregroundColor, value: gradientColor, range: NSRange(location: 0, length: tempString.length))
+        
+        secondTitleLineLabel.attributedText = tempString
+        
+        determineFontSize() // Recalculate the font size if needed
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         determineFontSize()

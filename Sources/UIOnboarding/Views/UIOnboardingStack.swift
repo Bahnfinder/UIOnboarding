@@ -73,6 +73,8 @@ final class UIOnboardingStack: UIStackView {
         onboardingTitleLabelStack.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         onboardingTitleLabelStack.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         
+        onboardingTitleLabelStack.updateSecondTitleLine()
+        
         addArrangedSubview(featuresList)
         featuresList.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         featuresList.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
