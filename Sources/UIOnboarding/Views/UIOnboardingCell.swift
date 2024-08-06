@@ -43,6 +43,7 @@ final class UIOnboardingCell: UITableViewCell {
         let label: UIIntrinsicLabel = .init()
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
+        label.textColor = .secondaryLabel
         
         if #available(iOS 15.0, *) {
             label.maximumContentSizeCategory = .accessibilityLarge
