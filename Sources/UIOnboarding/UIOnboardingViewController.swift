@@ -15,7 +15,7 @@ public final class UIOnboardingViewController: UIViewController {
     private var topOverlayView: UIOnboardingOverlay!
     private var bottomOverlayView: UIOnboardingOverlay!
     
-    private var continueButton: UIOnboardingButton!
+    public var continueButton: UIOnboardingButton!
     public var continueButtonWidth: NSLayoutConstraint!
     public var continueButtonHeight: NSLayoutConstraint!
     private var continueButtonBottom: NSLayoutConstraint!

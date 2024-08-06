@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class UIOnboardingButton: UIButton {
+public class UIOnboardingButton: UIButton {
     weak var delegate: UIOnboardingButtonDelegate?
     private var fontName: String = ""
     
