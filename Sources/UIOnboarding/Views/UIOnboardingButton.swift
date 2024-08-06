@@ -71,4 +71,12 @@ extension UIOnboardingButton {
         
 
     }
+    
+    
+    func applyGradient(tempString: NSMutableAttributedString) {
+        if let attributedTitle = attributedTitle(for: .normal)?.mutableCopy() as? NSMutableAttributedString {
+            attributedTitle.addAttribute(.foregroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: frame), range: NSMakeRange(0, attributedTitle.length))
+            setAttributedTitle(attributedTitle, for: .normal)
+        }
+    }
 }

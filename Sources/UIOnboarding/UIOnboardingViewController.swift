@@ -79,10 +79,7 @@ public final class UIOnboardingViewController: UIViewController {
         
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let attributedTitle = continueButton.attributedTitle(for: .normal)?.mutableCopy() as? NSMutableAttributedString {
-            attributedTitle.addAttribute(.foregroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: continueButton.frame), range: NSMakeRange(0, attributedTitle.length))
-            continueButton.setAttributedTitle(attributedTitle, for: .normal)
-        }
+        continueButton.applyGradient(tempString: NSMutableAttributedString(string: configuration.buttonConfiguration.title))
         startOnboardingAnimation(completion: {
             self.needsUIRefresh = true
         })
