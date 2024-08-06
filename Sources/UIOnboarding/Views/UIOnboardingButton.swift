@@ -74,7 +74,7 @@ extension UIOnboardingButton {
     
     
     func applyGradient(tempString: NSMutableAttributedString) {
-        tempString.addAttribute(.foregroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: frame), range: NSMakeRange(0, tempString.length))
+        tempString.addAttribute(.backgroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: frame), range: NSMakeRange(0, tempString.length))
             setAttributedTitle(tempString, for: .normal)
         }
 }
