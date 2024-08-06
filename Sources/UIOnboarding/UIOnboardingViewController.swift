@@ -17,7 +17,7 @@ public final class UIOnboardingViewController: UIViewController {
     
     private var continueButton: UIOnboardingButton!
     public var continueButtonWidth: NSLayoutConstraint!
-    private var continueButtonHeight: NSLayoutConstraint!
+    public var continueButtonHeight: NSLayoutConstraint!
     private var continueButtonBottom: NSLayoutConstraint!
     
     private var onboardingTextView: UIOnboardingTextView?
