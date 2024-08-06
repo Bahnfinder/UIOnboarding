@@ -69,9 +69,6 @@ extension UIOnboardingButton {
             titleLabel?.font = UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: traitCollection.horizontalSizeClass == .regular ? 19 : 17, weight: .bold))
         }
         
-        if let attributedTitle = attributedTitle(for: .normal)?.mutableCopy() as? NSMutableAttributedString {
-            attributedTitle.addAttribute(.foregroundColor, value: UIColor.fromGradient(bahnfinderGradientLayer, frame: frame), range: NSMakeRange(0, attributedTitle.length))
-            setAttributedTitle(attributedTitle, for: .normal)
-        }
+
     }
 }
